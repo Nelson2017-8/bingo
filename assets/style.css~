@@ -1,0 +1,109 @@
+:root {
+  --primary: #17a2b8;
+  --color-number: #000;
+  --color-head: #fff;
+  --background-color-number: #fff;
+  --background: #17a2b8;
+  --box: 50px;
+  --title: 100px;
+  --max-width: 555px;
+  --min-font-size: 18px;
+  --min-font-size-number: 36px;
+  --min-font-size-range: 16px;
+}
+.table-bingo{
+    padding: 20px;
+    background-color: var(--background) !important;
+    max-width: var(--max-width);
+    /*max-height: calc(var(--max-width));*/
+}
+.table-bingo .thead .number{
+    /*color: var(--primary) !important;*/
+    color: var(--color-head) !important;
+    font-size: var(--min-font-size);
+    line-height: 0;
+}
+.table-bingo .thead .title{
+    font-family: Roboto;
+    /*color: var(--primary) !important;*/
+    color: var(--color-head) !important;
+    font-size: var(--title);
+    text-align: center;
+    line-height: .9em;
+    letter-spacing: 2px;
+}
+
+.table-bingo .columns{
+    display: flex;
+}
+.table-bingo .columns .column{
+
+}
+.table-bingo .columns .column .range{
+    color: var(--color-head) !important;
+    font-size: var(--min-font-size-range);
+    text-align: center;
+}
+.table-bingo .columns .column .numbers{
+}
+.table-bingo .columns .column .numbers .number{
+    border: 1px solid var(--primary) !important;
+    text-align: center;
+    width: calc(var(--max-width)/6);
+    height: calc(var(--max-width)/6);
+    line-height: calc(var(--max-width)/6);
+    vertical-align: middle;
+    border-radius: 3px;
+    margin: 2px;
+    color: var(--color-number);
+    background-color: var(--background-color-number) !important;
+    font-size: var(--min-font-size-number);
+
+}
+.table-bingo .columns .column .numbers .number.bingo span{
+    line-height: calc(var(--max-width)/6);
+}
+.table-bingo .columns .column .numbers .number.bingo{
+    min-height: calc(var(--max-width)/6);
+    color: var(--primary) !important;
+}
+.bingo-ficha{
+	margin: 5px; 
+	background-color: #158ea1;
+	height: calc(var(--max-width)/8);;
+	width: calc(var(--max-width)/8);;
+	border-radius: 50%;
+	position: relative;
+}
+.ficha{
+	background-color:  var(--primary) !important;
+	height: calc(var(--max-width)/10);
+	width: calc(var(--max-width)/10);
+	border-radius: 50%;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.j{
+	height: calc(var(--max-width)/8);;
+	width: calc(var(--max-width)/8);;
+}
+@media print {
+     .noimprimir {display: none !important;}
+}
+
+@media all {
+   div.saltopagina{
+      /*display: none;*/
+   }
+}
+
+@media print{
+   div.saltopagina{
+      display:block;
+      page-break-before:always;
+   }
+}

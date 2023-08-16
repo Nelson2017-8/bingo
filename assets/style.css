@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+
+:root {
+  --primary: #2196F3;
+  --color-number: #000;
+  --color-head: #fff;
+  --background-color-number: #fff;
+  --background: #2196F3;
+  --box: 50px;
+  --title: 140px;
+  --title-consejo-comunal: 30px;
+  --max-width: 555px;
+  --min-font-size: 18px;
+  --min-font-size-number: 36px;
+  --min-font-size-range: 16px;
+}
+.table-bingo{
+    padding: 20px;
+    background-color: var(--background) !important;
+    max-width: var(--max-width);
+    /*max-height: calc(var(--max-width));*/
+}
+.table-bingo .thead .number{
+    /*color: var(--primary) !important;*/
+    color: var(--color-head) !important;
+    font-size: var(--min-font-size);
+    line-height: 0;
+}
+.table-bingo .thead .title{
+    font-family: Roboto;
+    /*color: var(--primary) !important;*/
+    color: var(--color-head) !important;
+    font-size: var(--title);
+    text-align: center;
+    line-height: .9em;
+    letter-spacing: 2px;
+}
+#generate-del-consejo-comunal .table-bingo .thead .title{
+    font-size: var(--title-consejo-comunal);
+    margin: .8em 0;
+}
+
+.table-bingo .columns{
+    display: flex;
+}
+.table-bingo .columns .column{
+
+}
+.table-bingo .columns .column .range{
+    color: var(--color-head) !important;
+    font-size: var(--min-font-size-range);
+    text-align: center;
+}
+.table-bingo .columns .column .numbers{
+}
+.table-bingo .columns .column .numbers .number{
+    border: 1px solid var(--primary) !important;
+    text-align: center;
+    width: calc(var(--max-width)/6.5);
+    height: calc(var(--max-width)/6.5);
+    line-height: calc(var(--max-width)/6.5);
+    vertical-align: middle;
+    border-radius: 3px;
+    margin: 2px;
+    color: var(--color-number);
+    background-color: var(--background-color-number) !important;
+    font-size: var(--min-font-size-number);
+
+}
+.table-bingo .columns .column .numbers .number.bingo span{
+    line-height: calc(var(--max-width)/6.5);
+}
+.table-bingo .columns .column .numbers .number.bingo{
+    min-height: calc(var(--max-width)/6.5);
+    color: var(--primary) !important;
+}
+.bingo-ficha{
+	margin: 5px; 
+	background-color: #158ea1;
+	height: calc(var(--max-width)/8);;
+	width: calc(var(--max-width)/8);;
+	border-radius: 50%;
+	position: relative;
+}
+.ficha{
+	background-color:  var(--primary) !important;
+	height: calc(var(--max-width)/10);
+	width: calc(var(--max-width)/10);
+	border-radius: 50%;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.j{
+	height: calc(var(--max-width)/8);
+	width: calc(var(--max-width)/8);
+	margin: 5px;
+}
+@media print {
+     .noimprimir {display: none !important;}
+}
+
+@media all {
+   div.saltopagina{
+      /*display: none;*/
+   }
+}
+
+@media print{
+   div.saltopagina{
+      display:block;
+      page-break-before:always;
+   }
+}
+
+.logo{
+    position: relative;
+    width: 70%!important;
+    height: auto;
+    margin: auto;
+}
+.logo img{
+    position: relative;
+    width: 100%!important;
+    height: auto;
+}
+.title.logo-title{
+    font-size: 2.5em!important;
+    letter-spacing: 63px!important;
+    margin-top: 0.3em!important;
+    margin-left: 1em;
+
+}
+.modelo-one .table-bingo{
+
+    /**
+    background: rgb(13,71,161);
+    background: linear-gradient(333deg, rgba(13,71,161,1) 0%, rgba(255,255,255,1) 18%, rgba(255,255,255,1) 28%, rgba(13,71,161,1) 37%, rgba(13,71,161,1) 54%, rgba(255,255,255,1) 64%, rgba(255,255,255,1) 76%, rgba(13,71,161,1) 93%, rgba(13,71,161,1) 100%);
+
+    **/
+    background: rgb(13,71,161);
+    background: linear-gradient(318deg, rgba(13,71,161,1) 0%, rgba(189,205,229,1) 12%, rgba(255,255,255,1) 22%, rgba(13,71,161,1) 40%, rgba(13,71,161,1) 58%, rgba(174,194,224,1) 69%, rgba(255,255,255,1) 89%, rgba(13,71,161,1) 100%);
+
+
+}
+
+.modelo-one .table-bingo .thead .title{
+    color: #1e1e1e!important;
+    font-family: 'Kanit', sans-serif;
+}
+
+.modelo-one .table-bingo .columns .column .range{
+    color: #1e1e1e!important;
+    font-family: 'Kanit', sans-serif;
+}
+
+.modelo-one .table-bingo .columns .column .numbers .number{
+    color: #fff!important;
+    background-color: #1e1e1e!important;
+    width: calc(555px /6.5);
+    height: calc(555px /6.5);
+    font-family: 'Kanit', sans-serif;
+    border-radius: 10px;
+}
+.modelo-one .sm{
+    font-size: 24px;
+    line-height: 24px !important;
+    margin-top: 30px;
+}
+.modelo-one .table-bingo .thead .number{
+    color: #1e1e1e!important;
+    font-family: 'Kanit', sans-serif;
+}

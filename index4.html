@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Tablas de bingo</title>
+    <link rel="stylesheet" href="./assets/bootstrap-4.5.0/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Concert+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+        .encabezado{
+            font-family: Concert One;
+            text-align: center;
+            font-size: 42px;
+            color: #fff;
+            line-height: 42px!important;
+            margin-top: -14px!important;
+        }
+        .code{
+            font-family: Concert One;
+            text-align: center;
+            font-size: 22px;
+            color: #fff;
+            line-height: 22px!important;
+        }
+        .table-bingo .thead .title{
+            font-family: 'Luckiest Guy', cursive!important;
+            left: -49px;
+            position: relative;
+            font-size: 82px!important;
+            letter-spacing: 35px!important;
+            margin-top: 30px!important;
+        }
+    </style>
+
+</head>
+<body>
+    <main class="container my-5 py-5">
+        <section class="row">
+            <section class="" id="generate-with-code">
+                <div class="row"></div>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        let code = [];
+        let alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+        let iA = 0;
+        let codes = []
+        for (let i = 1; i <= 500; i++) {
+            let nume = `${i}`
+            if(nume.length === 1){
+                nume = `00${i}`
+            }else if(nume.length === 2){
+                nume = `0${i}`
+            }
+            let tmp = `${alfabeto[iA]} - ${nume}`;
+            codes.push(tmp)
+            if(i%20 == 0){
+                iA += 1
+            }
+        }
+    </script>
+    <script src="./assets/html2canvas/html2canvas.min.js"></script>
+    <script src="./assets/jquery/jquery.js"></script>
+    <script src="./assets/main.js"></script>
+
+</body>
+</html>
